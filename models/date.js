@@ -320,11 +320,16 @@ module.exports = function(sequelize, DataTypes) {
 
     });
 
-    Category.associate = function(models) {
+    Date.associate = function(models) {
+        Date.belongsTo(models.Date, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
 
     };
 
-    return Category;
+    return Date;
 
 
 
