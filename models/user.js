@@ -1,41 +1,64 @@
-module.exports = function(sequelize, DataTypes) {
-    var User = sequelize.define("User", {
-        firstname: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1, 255]
-            }
+module.exports = function(Sequelize, DataTypes) {
+    var User = Sequelize.define("User", {
+        // Giving the Author model a name of type STRING
+        id: {
+          type: DataTypes.INTEGER,
+          autoIncrement: true,
+          primaryKey: true
         },
-        lastname: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1, 255]
+        username: {
+          type: DataTypes.STRING(50),
+          allowNull: false,
+          validate: {
+            len: {
+              args: [1],
+              msg: "Invalid Username"
             }
+          }
         },
-        age: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1, 3]
+        password: {
+          type: DataTypes.STRING(50),
+          allowNull: false,
+          validate: {
+            len: {
+              args: [1],
+              msg: "Invalid Password"
             }
+          }
         },
-        height: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [1, 3]
+        firstName: {
+          type: DataTypes.STRING(50),
+          allowNull: false,
+          validate: {
+            len: {
+              args: [1],
+              msg: "Invalid first name"
             }
+          }
+        },
+        lastName: {
+          type: DataTypes.STRING(100),
+          allowNull: false,
+          validate: {
+            len: {
+              args: [1],
+              msg: "Invalid last name"
+            }
+          }
         },
         weight: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER(3),
             allowNull: false,
-            validate: {
-                len: [1, 3]
-            }
-        },
-    });
+          },
+        height: {
+            type: DataTypes.INTEGER(3),
+            allowNull: false,
+          },
+        age: {
+            type: DataTypes.INTEGER(2),
+            allowNull: false,
+          },
+      });
 
     User.associate = function(models) {
         User.hasMany(models.Date, {
