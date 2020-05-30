@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Date = sequelize.define("date", {
+    var Date = sequelize.define("Date", {
         firstname: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -321,7 +321,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Date.associate = function(models) {
-        Date.belongsTo(models.Date, {
+        Date.belongsTo(models.User, {
             foreignKey: {
                 allowNull: false
             }
