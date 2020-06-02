@@ -5,6 +5,8 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
+var bodyParser = require("body-parser");
+var moment = require('moment');
 
 // Sets up the Express App
 // =============================================================
@@ -23,9 +25,9 @@ app.use(express.static("public"));
 
 // Routes
 // =============================================================
-require("./routes/date-api-routes.js")(app);
-require("./routes/user-api-routes.js")(app);
-//require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+//require("./routes/user-api-routes.js")(app);
+require("./routes/htmlRoute.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
