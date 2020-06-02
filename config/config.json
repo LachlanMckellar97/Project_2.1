@@ -3,7 +3,7 @@
     "username": "root",
     "password": "Mckellar12!",
     "database": "planner_db",
-    "host": "127.0.0.1",
+    "host": "cig4l2op6r0fxymw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
