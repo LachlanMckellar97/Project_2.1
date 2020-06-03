@@ -3,12 +3,12 @@
   }
   
   .nav-wrapper {
-  background: url(../img/bg-pattern.png),linear-gradient(to left,#354e94,#8f94ac);
+  background: url(../img/bg-pattern.png),linear-gradient(to left,#4e5f4a,#7f9c5d);
     font-family: 'Aclonica', sans-serif;
   }
   
   body {
-  background: url(../img/bg-pattern.png),linear-gradient(to left,#354e94,#8f94ac);
+  background: url(../img/bg-pattern.png),linear-gradient(to left,#728b6d,#f3ffe5);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -45,7 +45,7 @@
   
   #submitButton {
     color: #eee;
-    background-color: #5d5691;
+    background-color: #656568;
   }
   
   #modalBox {
@@ -56,6 +56,7 @@
   
   #dayAgenda {
     background-color: #f5f5f5;
+    height: 100%;
   }
   
   a.regButton {
@@ -109,7 +110,7 @@
   }
   
   .btn:hover{
-    background-color: #455de2;
+    background-color: #6d77b1;
     color: #fff;
   }
   
